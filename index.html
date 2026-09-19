@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Nova | Work Smarter</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#635BFF",
+                        dark: "#172033"
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 text-slate-800">
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="bg-white border-b border-slate-200">
+
+        <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+            <div class="h-20 flex items-center justify-between">
+
+                <!-- Logo -->
+
+                <a
+                    href="#home"
+                    class="text-2xl font-bold text-slate-900"
+                >
+                    Nova<span class="text-primary">.</span>
+                </a>
+
+
+                <!-- Desktop Navigation -->
+
+                <nav class="hidden md:flex items-center gap-8">
+
+                    <a
+                        href="#home"
+                        class="text-sm text-slate-600 hover:text-primary transition"
+                    >
+                        Home
+                    </a>
+
+                    <a
+                        href="#features"
+                        class="text-sm text-slate-600 hover:text-primary transition"
+                    >
+                        Features
+                    </a>
+
+                    <a
+                        href="#pricing"
+                        class="text-sm text-slate-600 hover:text-primary transition"
+                    >
+                        Pricing
+                    </a>
+
+                    <a
+                        href="#about"
+                        class="text-sm text-slate-600 hover:text-primary transition"
+                    >
+                        About
+                    </a>
+
+                    <a
+                        href="#contact"
+                        class="text-sm text-slate-600 hover:text-primary transition"
+                    >
+                        Contact
+                    </a>
+
+                </nav>
+
+
+                <!-- Login -->
+
+                <button
+                    class="hidden md:block border border-primary text-primary px-5 py-2.5 rounded-lg text-sm font-medium hover:bg-primary hover:text-white transition"
+                >
+                    Log in
+                </button>
+
+
+                <!-- Mobile Menu Button -->
+
+                <button
+                    id="menuButton"
+                    class="md:hidden text-slate-700 text-2xl"
+                    aria-label="Open menu"
+                >
+                    ☰
+                </button>
+
+            </div>
+
+
+            <!-- Mobile Menu -->
+
+            <div
+                id="mobileMenu"
+                class="hidden md:hidden pb-6"
+            >
+
+                <div class="flex flex-col gap-4">
+
+                    <a href="#home" class="mobile-link">
+                        Home
+                    </a>
+
+                    <a href="#features" class="mobile-link">
+                        Features
+                    </a>
+
+                    <a href="#pricing" class="mobile-link">
+                        Pricing
+                    </a>
+
+                    <a href="#about" class="mobile-link">
+                        About
+                    </a>
+
+                    <a href="#contact" class="mobile-link">
+                        Contact
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <main>
+
+        <section
+            id="home"
+            class="bg-gradient-to-br from-slate-50 to-indigo-50"
+        >
+
+            <div
+                class="max-w-7xl mx-auto px-6 lg:px-8 py-20 lg:py-28"
+            >
+
+                <div
+                    class="grid lg:grid-cols-2 gap-16 items-center"
+                >
+
+                    <!-- Hero Text -->
+
+                    <div>
+
+                        <p
+                            class="text-primary font-bold text-sm tracking-widest mb-5"
+                        >
+                            SMARTER WORK. BETTER RESULTS.
+                        </p>
+
+                        <h1
+                            class="text-5xl sm:text-6xl lg:text-7xl font-bold text-slate-900 leading-tight"
+                        >
+                            Build smarter.
+                            <span class="text-primary">
+                                Work faster.
+                            </span>
+                        </h1>
+
+                        <p
+                            class="mt-6 text-lg text-slate-600 max-w-xl leading-relaxed"
+                        >
+                            Nova helps modern teams manage projects,
+                            collaborate effortlessly, and achieve more
+                            every day.
+                        </p>
+
+
+                        <!-- Buttons -->
+
+                        <div
+                            class="mt-8 flex flex-col sm:flex-row gap-4"
+                        >
+
+                            <button
+                                class="bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-indigo-600 transition shadow-lg shadow-indigo-200"
+                            >
+                                Get Started
+                            </button>
+
+                            <a
+                                href="#features"
+                                class="border border-slate-300 bg-white text-slate-700 px-7 py-3.5 rounded-lg font-semibold hover:border-primary hover:text-primary transition text-center"
+                            >
+                                Learn More
+                            </a>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Dashboard Card -->
+
+                    <div class="relative">
+
+                        <!-- Decorative background -->
+
+                        <div
+                            class="absolute -top-8 -right-8 w-40 h-40 bg-indigo-200 rounded-full blur-3xl opacity-50"
+                        ></div>
+
+
+                        <div
+                            class="relative bg-white rounded-2xl shadow-2xl shadow-slate-200 border border-slate-200 p-7"
+                        >
+
+                            <!-- Card Header -->
+
+                            <div
+                                class="flex items-center justify-between mb-8"
+                            >
+
+                                <div>
+
+                                    <p
+                                        class="text-sm text-slate-500"
+                                    >
+                                        Project Overview
+                                    </p>
+
+                                    <h3
+                                        class="text-lg font-bold text-slate-900 mt-1"
+                                    >
+                                        Website Project
+                                    </h3>
+
+                                </div>
+
+                                <button
+                                    class="text-slate-400 text-xl"
+                                >
+                                    •••
+                                </button>
+
+                            </div>
+
+
+                            <!-- Progress -->
+
+                            <div>
+
+                                <div
+                                    class="flex justify-between items-end"
+                                >
+
+                                    <span
+                                        class="text-sm text-slate-500"
+                                    >
+                                        Project progress
+                                    </span>
+
+                                    <span
+                                        class="text-2xl font-bold text-slate-900"
+                                    >
+                                        78%
+                                    </span>
+
+                                </div>
+
+                                <div
+                                    class="h-3 bg-slate-100 rounded-full mt-3 overflow-hidden"
+                                >
+
+                                    <div
+                                        class="h-full w-[78%] bg-primary rounded-full"
+                                    ></div>
+
+                                </div>
+
+                            </div>
+
+
+                            <!-- Statistics -->
+
+                            <div
+                                class="grid grid-cols-3 gap-4 mt-10 pt-7 border-t border-slate-100"
+                            >
+
+                                <div>
+
+                                    <p
+                                        class="text-2xl font-bold text-slate-900"
+                                    >
+                                        24
+                                    </p>
+
+                                    <p
+                                        class="text-xs text-slate-500 mt-1"
+                                    >
+                                        Tasks
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <p
+                                        class="text-2xl font-bold text-slate-900"
+                                    >
+                                        18
+                                    </p>
+
+                                    <p
+                                        class="text-xs text-slate-500 mt-1"
+                                    >
+                                        Completed
+                                    </p>
+
+                                </div>
+
+                                <div>
+
+                                    <p
+                                        class="text-2xl font-bold text-slate-900"
+                                    >
+                                        8
+                                    </p>
+
+                                    <p
+                                        class="text-xs text-slate-500 mt-1"
+                                    >
+                                        Members
+                                    </p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             FEATURES
+        ========================== -->
+
+        <section
+            id="features"
+            class="py-24 bg-white"
+        >
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+                <!-- Heading -->
+
+                <div class="max-w-2xl mx-auto text-center">
+
+                    <p
+                        class="text-primary font-bold text-sm tracking-widest"
+                    >
+                        POWERFUL FEATURES
+                    </p>
+
+                    <h2
+                        class="mt-3 text-4xl md:text-5xl font-bold text-slate-900"
+                    >
+                        Everything you need to work better.
+                    </h2>
+
+                    <p
+                        class="mt-5 text-slate-600"
+                    >
+                        Simple tools designed to help your team
+                        stay organized, focused, and productive.
+                    </p>
+
+                </div>
+
+
+                <!-- Feature Cards -->
+
+                <div
+                    class="grid md:grid-cols-3 gap-6 mt-16"
+                >
+
+                    <!-- Card 1 -->
+
+                    <div
+                        class="p-8 rounded-2xl border border-slate-200 bg-white hover:-translate-y-1 hover:shadow-xl transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-50 text-primary flex items-center justify-center text-xl font-bold"
+                        >
+                            ✓
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900"
+                        >
+                            Easy to Use
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed"
+                        >
+                            A clean and intuitive interface that
+                            makes managing projects simple.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Card 2 -->
+
+                    <div
+                        class="p-8 rounded-2xl border border-slate-200 bg-white hover:-translate-y-1 hover:shadow-xl transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-50 text-primary flex items-center justify-center text-xl"
+                        >
+                            ⚡
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900"
+                        >
+                            Lightning Fast
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed"
+                        >
+                            Stay productive with a fast and responsive
+                            workspace built for modern teams.
+                        </p>
+
+                    </div>
+
+
+                    <!-- Card 3 -->
+
+                    <div
+                        class="p-8 rounded-2xl border border-slate-200 bg-white hover:-translate-y-1 hover:shadow-xl transition"
+                    >
+
+                        <div
+                            class="w-12 h-12 rounded-xl bg-indigo-50 text-primary flex items-center justify-center text-xl"
+                        >
+                            🔒
+                        </div>
+
+                        <h3
+                            class="mt-6 text-xl font-bold text-slate-900"
+                        >
+                            Secure
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-600 leading-relaxed"
+                        >
+                            Keep your projects and important information
+                            protected with secure tools.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="py-24 bg-dark text-white"
+        >
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+                <div class="max-w-3xl">
+
+                    <p
+                        class="text-indigo-300 font-bold text-sm tracking-widest"
+                    >
+                        ABOUT NOVA
+                    </p>
+
+                    <h2
+                        class="mt-4 text-4xl md:text-5xl font-bold"
+                    >
+                        Designed for modern teams.
+                    </h2>
+
+                    <p
+                        class="mt-6 text-slate-300 text-lg leading-relaxed"
+                    >
+                        Nova brings projects, tasks, and collaboration
+                        together in one simple workspace. Whether you're
+                        working independently or with a team, Nova helps
+                        you stay organized and focused.
+                    </p>
+
+                    <button
+                        class="mt-8 bg-primary text-white px-7 py-3.5 rounded-lg font-semibold hover:bg-indigo-600 transition"
+                    >
+                        Learn More
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             PRICING
+        ========================== -->
+
+        <section
+            id="pricing"
+            class="py-24 bg-slate-50"
+        >
+
+            <div class="max-w-7xl mx-auto px-6 lg:px-8">
+
+                <div class="text-center max-w-2xl mx-auto">
+
+                    <p
+                        class="text-primary font-bold text-sm tracking-widest"
+                    >
+                        SIMPLE PRICING
+                    </p>
+
+                    <h2
+                        class="mt-3 text-4xl md:text-5xl font-bold text-slate-900"
+                    >
+                        Choose your plan.
+                    </h2>
+
+                    <p
+                        class="mt-5 text-slate-600"
+                    >
+                        Flexible plans for individuals and growing teams.
+                    </p>
+
+                </div>
+
+
+                <div
+                    class="grid md:grid-cols-3 gap-6 mt-16"
+                >
+
+                    <!-- Starter -->
+
+                    <div
+                        class="bg-white border border-slate-200 rounded-2xl p-8"
+                    >
+
+                        <h3
+                            class="text-xl font-bold"
+                        >
+                            Starter
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-500"
+                        >
+                            For individuals getting started.
+                        </p>
+
+                        <div class="mt-7">
+
+                            <span
+                                class="text-5xl font-bold"
+                            >
+                                $9
+                            </span>
+
+                            <span class="text-slate-500">
+                                /month
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="mt-8 w-full border border-slate-300 rounded-lg py-3 font-semibold hover:border-primary hover:text-primary transition"
+                        >
+                            Get Started
+                        </button>
+
+                    </div>
+
+
+                    <!-- Professional -->
+
+                    <div
+                        class="relative bg-white border-2 border-primary rounded-2xl p-8 shadow-xl"
+                    >
+
+                        <div
+                            class="absolute -top-4 right-6 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold"
+                        >
+                            POPULAR
+                        </div>
+
+                        <h3
+                            class="text-xl font-bold"
+                        >
+                            Professional
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-500"
+                        >
+                            For growing teams and businesses.
+                        </p>
+
+                        <div class="mt-7">
+
+                            <span
+                                class="text-5xl font-bold"
+                            >
+                                $19
+                            </span>
+
+                            <span class="text-slate-500">
+                                /month
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="mt-8 w-full bg-primary text-white rounded-lg py-3 font-semibold hover:bg-indigo-600 transition"
+                        >
+                            Get Started
+                        </button>
+
+                    </div>
+
+
+                    <!-- Business -->
+
+                    <div
+                        class="bg-white border border-slate-200 rounded-2xl p-8"
+                    >
+
+                        <h3
+                            class="text-xl font-bold"
+                        >
+                            Business
+                        </h3>
+
+                        <p
+                            class="mt-3 text-slate-500"
+                        >
+                            For larger teams and organizations.
+                        </p>
+
+                        <div class="mt-7">
+
+                            <span
+                                class="text-5xl font-bold"
+                            >
+                                $39
+                            </span>
+
+                            <span class="text-slate-500">
+                                /month
+                            </span>
+
+                        </div>
+
+                        <button
+                            class="mt-8 w-full border border-slate-300 rounded-lg py-3 font-semibold hover:border-primary hover:text-primary transition"
+                        >
+                            Get Started
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             CONTACT
+        ========================== -->
+
+        <section
+            id="contact"
+            class="py-24 bg-white"
+        >
+
+            <div class="max-w-3xl mx-auto px-6 lg:px-8">
+
+                <div class="text-center">
+
+                    <p
+                        class="text-primary font-bold text-sm tracking-widest"
+                    >
+                        GET IN TOUCH
+                    </p>
+
+                    <h2
+                        class="mt-3 text-4xl md:text-5xl font-bold text-slate-900"
+                    >
+                        Let's build something great.
+                    </h2>
+
+                </div>
+
+
+                <form
+                    id="contactForm"
+                    class="mt-12 space-y-5"
+                >
+
+                    <input
+                        id="name"
+                        type="text"
+                        placeholder="Your name"
+                        class="w-full px-5 py-4 border border-slate-300 rounded-lg outline-none focus:border-primary transition"
+                    >
+
+                    <input
+                        id="email"
+                        type="email"
+                        placeholder="Your email"
+                        class="w-full px-5 py-4 border border-slate-300 rounded-lg outline-none focus:border-primary transition"
+                    >
+
+                    <textarea
+                        id="message"
+                        placeholder="Your message"
+                        rows="6"
+                        class="w-full px-5 py-4 border border-slate-300 rounded-lg outline-none focus:border-primary transition resize-none"
+                    ></textarea>
+
+                    <button
+                        type="submit"
+                        class="w-full bg-primary text-white py-4 rounded-lg font-semibold hover:bg-indigo-600 transition"
+                    >
+                        Send Message
+                    </button>
+
+                    <p
+                        id="formMessage"
+                        class="text-center text-sm"
+                    ></p>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer
+        class="bg-white border-t border-slate-200"
+    >
+
+        <div
+            class="max-w-7xl mx-auto px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4"
+        >
+
+            <div
+                class="text-2xl font-bold text-slate-900"
+            >
+                Nova<span class="text-primary">.</span>
+            </div>
+
+            <p
+                class="text-sm text-slate-500"
+            >
+                © 2026 Nova. All rights reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+</html>
